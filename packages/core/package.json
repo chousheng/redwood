@@ -22,11 +22,8 @@
     "rw-log-formatter": "./dist/bins/rw-log-formatter.js",
     "rwfw": "./dist/bins/rwfw.js"
   },
-  "files": [
-    "config",
-    "dist"
-  ],
   "scripts": {
+    "prepare": "yarn build",
     "build": "yarn build:js",
     "build:js": "babel src -d dist --extensions \".js,.ts,.tsx\"",
     "prepublishOnly": "NODE_ENV=production yarn build",
